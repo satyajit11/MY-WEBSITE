@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
+<link href="SpryAssets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+#TabbedPanels1 .TabbedPanelsContentGroup .TabbedPanelsContent.TabbedPanelsContentVisible table tr td {
+	font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+
+<body>
+
+<script language="javascript">
+function buycheck()
+{
+
+var res=true;
+var x=document.form1.select11.value;
+var y=document.form1.textfield11.value;
+var z=document.form1.select12.value;
+ 
+
+if(x=="Select City")
+{alert("Enter CITY"); document.form1.select11.focus(); res=false;}	
+else
+if(y=="")
+{alert("Enter AMOUNT"); document.form1.textfield11.focus(); res=false;}	
+else
+if(z=="Property Type")
+{alert("SELECT PROPERTY"); document.form1.select12.focus(); res=false;}	
+if(res==true)
+{document.form1.submit();}
+
+}
+
+</script>
+<script language="javascript">
+function rentcheck()
+{
+var res=true;
+var x=document.form5.select3.value;
+var y=document.form5.pri.value;
+var z=document.form5.select4.value;
+ 
+
+if(x=="Select City")
+{alert("Enter CITY"); document.form5.select3.focus(); res=false;}	
+else
+if(y=="")
+{alert("Enter AMOUNT"); document.form5.pri.focus(); res=false;}	
+else
+if(z=="Property Type" )
+{alert("Enter Property" ); document.form5.select4.focus(); res=false;}	
+if(res==true)
+{document.form5.submit();}
+}
+
+</script>
+
+<div id="TabbedPanels1" class="TabbedPanels">
+
+  <ul class="TabbedPanelsTabGroup">
+    <li class="TabbedPanelsTab" tabindex="0">BUY</li>
+    <li class="TabbedPanelsTab" tabindex="0">RENTAL</li>
+  </ul>
+  <div class="TabbedPanelsContentGroup" style="background-color:#FFFFFF">
+    <div class="TabbedPanelsContent"><table width="196" border="0" cellpadding="6" bgcolor="#A0A0A4">
+  <tr>
+    <td width="177">
+	<form id="form1" name="form1" method="post" action="store.jsp">
+      <label for="select">City</label>
+      <select name="select11">
+        
+          <option value="Select City">--Select City--</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Kolkata">Kolkata</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Chennai">Chennai</option>
+      </select>
+   </td>
+  </tr>
+  <tr>
+    <td>
+      <label for="textfield">Sellprice</label>
+      <input type="text" name="textfield11"/>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label for="select2">Property Type</label>
+      <select name="select12">
+
+<option value="Property Type">--Property Type--</option>>
+<option value="COMERCIAL">COMERCIAL</option>
+<option value="RESIDENTIAL">RESIDENTIAL</option>
+<option value="LAND">LAND</option>
+<option value="RESORT">RESORT</option>
+<option value="BUNGALOW">BUNGALOW</option>
+<option value="APARTMENT">APARTMENT</option>
+
+</select>
+  </td>
+  </tr>
+  <tr>
+    <td>
+      
+       <input type="button" name="button" id="button"  value="SEARCH" onClick="buycheck();">
+    </form>
+	</td>
+  </tr>
+    </table>
+</div>
+    <div class="TabbedPanelsContent">
+      <table width="195" border="0" cellpadding="6" bgcolor="#A0A0A4">
+        <tr>
+          <td width="179"><form id="form5" name="form5" method="post" action="store1.jsp">
+            <label for="select3">city</label>
+            <select name="select3">
+             
+        <option value="Select City">--Select City--</option>
+       <option value="Delhi">Delhi</option>
+        <option value="Kolkata">Kolkata</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Chennai">Chennai</option>
+ 
+      </select>
+         </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="PR">Rent Price</label>
+            <input type="text" name="pri" id="PR" />         </td>
+        </tr>
+        <tr>
+          <td><label for="select4">PropertyType</label>
+            <select name="select4" id="select4">
+
+<option value="Property Type">--Property Type--</option>>
+<option value="COMERCIAL">COMERCIAL</option>
+<option value="RESIDENTIAL">RESIDENTIAL</option>
+<option value="LAND">LAND</option>
+<option value="RESORT">RESORT</option>
+<option value="BUNGALOW">BUNGALOW</option>
+<option value="APARTMENT">APARTMENT</option>
+      </select>       </td>
+        </tr>
+        <tr>
+          <td><input type="button" name="button2" id="button2" value="SEARCH" onClick="rentcheck();">
+                  </form></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+NEW DATABASE:
+name: biddingdb
+
+bidproductid     Number
+image               Text
+productdetails  Text
+available           Text
+validfrom		Text
+validto		Text
+
+name: bidtransaction
+
+bidproductid     Number
+bidtransid     Number
+emailid            Text
+bidamt          Number
+
+
+Dealing Type:
+
+
+emailid            Text
+transid             Number
+code Number   Number
+propertytype    Text
+dealtype          Text
+price                 Number
+validfrom           Date/Time
+validupto           Date/Time
+amtpaid             Number
+
